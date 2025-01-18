@@ -1,0 +1,31 @@
+{
+  "name": "invoiceappserver",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "rimraf ./dist",
+    "build": "npx tsc",
+    "start": "node ./dist/main.js",
+    "preserve": "npm run build",
+    "serve": "concurrently \"npx tsc -w\"  \"nodemon ./dist/main.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^9.1.2",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5",
+    "rimraf": "^6.0.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.7",
+    "nodemon": "^3.1.9",
+    "typescript": "^5.7.3"
+  }
+}
